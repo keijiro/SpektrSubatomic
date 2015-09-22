@@ -230,6 +230,7 @@ GameObject:
   - 114: {fileID: 1236696117}
   - 114: {fileID: 1236696120}
   - 114: {fileID: 1236696118}
+  - 114: {fileID: 1236696121}
   - 114: {fileID: 1236696119}
   m_Layer: 0
   m_Name: Main Camera
@@ -268,7 +269,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: .0196078438}
+  m_BackGroundColor: {r: .16911763, g: .16911763, b: .16911763, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -356,7 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fc18a55c333d51489e5ee49b3cbff50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _falloff: .5
+  _falloff: .550000012
   _shader: {fileID: 4800000, guid: 89a223cbeee1935419811f8736c0a9b3, type: 3}
 --- !u!114 &1236696118
 MonoBehaviour:
@@ -369,7 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e11ef96a8174459fa3d231009ff28f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lateralShift: .5
+  _lateralShift: .699999988
   _axialStrength: .800000012
   _axialShift: .200000003
   _axialQuality: 1
@@ -385,8 +386,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10593b7d510b64560a297a8af1356dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _colorTemp: -.400000006
-  _colorTint: -.129999995
+  _colorTemp: -.150000006
+  _colorTint: .0299999993
   _toneMapping: 1
   _exposure: 1
   _saturation: 1
@@ -465,7 +466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _subject: {fileID: 0}
   _distance: 15
-  _fNumber: 1
+  _fNumber: .800000012
   _useCameraFov: 1
   _focalLength: .0500000007
   _maxBlur: .0299999993
@@ -474,6 +475,24 @@ MonoBehaviour:
   _foregroundBlur: 1
   _visualize: 0
   _shader: {fileID: 4800000, guid: b99c58356816f7b46818fe7e788b2fa1, type: 3}
+--- !u!114 &1236696121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1236696109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8e0d4b232a1475283137c73daf58a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _color1: {r: 0, g: 0, b: 1, a: 1}
+  _color2: {r: 1, g: .765517235, b: 0, a: 1}
+  _angle: 100
+  _opacity: .150000006
+  _blendMode: 2
+  _debug: 0
+  _shader: {fileID: 4800000, guid: 0eccb83e08c1a4981813863cbdebc044, type: 3}
 --- !u!1 &1476868276
 GameObject:
   m_ObjectHideFlags: 0
