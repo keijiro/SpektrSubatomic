@@ -2,7 +2,7 @@
 using UnityEngine.Rendering;
 
 [ExecuteInEditMode]
-public class GeometricMirror : MonoBehaviour
+public class Subatomic : MonoBehaviour
 {
     [SerializeField]
     Mesh _mesh;

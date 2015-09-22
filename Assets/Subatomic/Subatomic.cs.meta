@@ -1,10 +1,11 @@
 fileFormatVersion: 2
 guid: e506caabdb1234d1a9473d6ed47a378b
-timeCreated: 1442905062
+timeCreated: 1442933400
 licenseType: Pro
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - _mesh: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
