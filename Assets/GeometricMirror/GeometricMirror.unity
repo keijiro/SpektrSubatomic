@@ -133,7 +133,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mesh: {fileID: 4300000, guid: 105f20843ae0d4701809e937b667bc28, type: 3}
-  _shader: {fileID: 4800000, guid: f0b611fb279ab42ef8cf4f7f90b5f15f, type: 3}
+  _materials:
+  - {fileID: 2100000, guid: 457dd5838e6d94588b2945ddec476847, type: 2}
+  _castShadows: 0
+  _receiveShadows: 0
 --- !u!4 &286849338
 Transform:
   m_ObjectHideFlags: 0
@@ -194,7 +197,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mesh: {fileID: 4300000, guid: 105f20843ae0d4701809e937b667bc28, type: 3}
-  _shader: {fileID: 4800000, guid: f0b611fb279ab42ef8cf4f7f90b5f15f, type: 3}
+  _materials:
+  - {fileID: 2100000, guid: 457dd5838e6d94588b2945ddec476847, type: 2}
+  _castShadows: 0
+  _receiveShadows: 0
 --- !u!4 &1194229532
 Transform:
   m_ObjectHideFlags: 0
@@ -516,7 +522,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mesh: {fileID: 4300000, guid: 105f20843ae0d4701809e937b667bc28, type: 3}
-  _shader: {fileID: 4800000, guid: f0b611fb279ab42ef8cf4f7f90b5f15f, type: 3}
+  _materials:
+  - {fileID: 2100000, guid: 457dd5838e6d94588b2945ddec476847, type: 2}
+  _castShadows: 0
+  _receiveShadows: 0
 --- !u!4 &1476868279
 Transform:
   m_ObjectHideFlags: 0

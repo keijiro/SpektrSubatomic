@@ -1,60 +1,63 @@
 ﻿using UnityEngine;
+using UnityEngine.Rendering;
 
+[ExecuteInEditMode]
 public class GeometricMirror : MonoBehaviour
 {
     [SerializeField]
     Mesh _mesh;
 
     [SerializeField]
-    Shader _shader;
+    Material[] _materials = new Material[1];
 
-    Material[] _materials;
+    [SerializeField]
+    ShadowCastingMode _castShadows;
 
-    void DrawMesh(float sx, float sy, float sz, int index)
+    public ShadowCastingMode shadowCastingMode {
+        get { return _castShadows; }
+        set { _castShadows = value; }
+    }
+
+    [SerializeField]
+    bool _receiveShadows = false;
+
+    public bool receiveShadows {
+        get { return _receiveShadows; }
+        set { _receiveShadows = value; }
+    }
+
+    MaterialPropertyBlock _props;
+
+    void DrawMesh(float sx, float sy, float sz)
     {
-        var m = transform.localToWorldMatrix;
-        m = Matrix4x4.Scale(new Vector3(sx, sy, sz)) * m;
-        Graphics.DrawMesh(
-            _mesh, m,
-            _materials[index], 0
-        );
+        var scale = new Vector3(sx, sy, sz);
+        var matrix = Matrix4x4.Scale(scale) * transform.localToWorldMatrix;
+
+        _props.SetVector("_FlipFlags", scale);
+
+        var maxi = Mathf.Min(_mesh.subMeshCount, _materials.Length);
+        for (var i = 0; i < maxi; i++)
+        {
+            Graphics.DrawMesh(
+                _mesh, matrix, _materials[i], 0, null, i,
+                _props, _castShadows, _receiveShadows);
+        }
     }
 
     void Update()
     {
-        if (_materials == null)
-        {
-            _materials = new Material[8];
-            for (var i = 0; i < 8; i++)
-                _materials[i] = new Material(_shader);
+        if (_mesh == null || _materials == null) return;
 
-            _materials[1].EnableKeyword("FLIP_X");
+        if (_props == null)
+            _props = new MaterialPropertyBlock();
 
-            _materials[2].EnableKeyword("FLIP_Y");
-
-            _materials[3].EnableKeyword("FLIP_X");
-            _materials[3].EnableKeyword("FLIP_Y");
-
-            _materials[4].EnableKeyword("FLIP_Z");
-
-            _materials[5].EnableKeyword("FLIP_X");
-            _materials[5].EnableKeyword("FLIP_Z");
-
-            _materials[6].EnableKeyword("FLIP_Y");
-            _materials[6].EnableKeyword("FLIP_Z");
-
-            _materials[7].EnableKeyword("FLIP_X");
-            _materials[7].EnableKeyword("FLIP_Y");
-            _materials[7].EnableKeyword("FLIP_Z");
-        }
-
-        DrawMesh( 1,  1,  1, 0);
-        DrawMesh(-1,  1,  1, 1);
-        DrawMesh( 1, -1,  1, 2);
-        DrawMesh(-1, -1,  1, 3);
-        DrawMesh( 1,  1, -1, 4);
-        DrawMesh(-1,  1, -1, 5);
-        DrawMesh( 1, -1, -1, 6);
-        DrawMesh(-1, -1, -1, 7);
+        DrawMesh( 1,  1,  1);
+        DrawMesh(-1,  1,  1);
+        DrawMesh( 1, -1,  1);
+        DrawMesh(-1, -1,  1);
+        DrawMesh( 1,  1, -1);
+        DrawMesh(-1,  1, -1);
+        DrawMesh( 1, -1, -1);
+        DrawMesh(-1, -1, -1);
     }
 }
