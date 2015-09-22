@@ -2,7 +2,7 @@
 using UnityEngine.Rendering;
 
 [ExecuteInEditMode]
-public class Subatomic : MonoBehaviour
+public class SubatomicRenderer : MonoBehaviour
 {
     [SerializeField]
     Mesh _mesh;
