@@ -15,7 +15,7 @@
 
         CGPROGRAM
 
-        #pragma surface surf Standard nolightmap
+        #pragma surface surf Standard nolightmap addshadow
         #pragma target 3.0
 
         sampler2D _MainTex;
