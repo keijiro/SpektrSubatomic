@@ -344,7 +344,7 @@ MonoBehaviour:
   _sampleRadius: .800000012
   _rangeCheck: 1
   _fallOffDistance: 100
-  _sampleCount: 1
+  _sampleCount: 2
   _shader: {fileID: 4800000, guid: c928e16c12e994a70928a9181450d18c, type: 3}
 --- !u!114 &1236696117
 MonoBehaviour:
@@ -471,7 +471,7 @@ MonoBehaviour:
   _focalLength: .0500000007
   _maxBlur: .0299999993
   _irisAngle: 0
-  _sampleCount: 1
+  _sampleCount: 2
   _foregroundBlur: 1
   _visualize: 0
   _shader: {fileID: 4800000, guid: b99c58356816f7b46818fe7e788b2fa1, type: 3}

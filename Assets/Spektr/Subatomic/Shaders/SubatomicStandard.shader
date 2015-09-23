@@ -1,4 +1,7 @@
-﻿Shader "Subatomic/Standard"
+﻿//
+// Subatomic - geometric mirroring effect
+//
+Shader "Spektr/Subatomic/Standard"
 {
     Properties
     {
@@ -29,7 +32,7 @@
         #pragma surface surf Standard nolightmap addshadow
         #pragma target 3.0
 
-        #pragma shader_feature _METALLICGLOSSMAP 
+        #pragma shader_feature _METALLICGLOSSMAP
         #pragma shader_feature _NORMALMAP
         #pragma shader_feature _EMISSION
 
@@ -91,5 +94,5 @@
         ENDCG
     }
     FallBack "Diffuse"
-    CustomEditor "SubatomicStandardMaterialEditor"
+    CustomEditor "Spektr.SubatomicStandardMaterialEditor"
 }
