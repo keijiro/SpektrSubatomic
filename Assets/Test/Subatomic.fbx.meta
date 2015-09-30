@@ -6,10 +6,31 @@ ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
     100000: //RootNode
+    100002: crystal
+    100004: ipr_camera
+    100006: box
+    100008: ring
+    100010: ball
     400000: //RootNode
+    400002: crystal
+    400004: ipr_camera
+    400006: box
+    400008: ring
+    400010: ball
     2300000: //RootNode
+    2300002: crystal
+    2300004: box
+    2300006: ring
+    2300008: ball
     3300000: //RootNode
+    3300002: crystal
+    3300004: box
+    3300006: ring
+    3300008: ball
     4300000: crystal
+    4300002: box
+    4300004: ring
+    4300006: ball
   materials:
     importMaterials: 0
     materialName: 0
@@ -30,7 +51,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 100
@@ -53,7 +74,7 @@ ModelImporter:
     splitTangentsAcrossUV: 1
     normalImportMode: 0
     tangentImportMode: 1
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     human: []
